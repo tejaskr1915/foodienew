@@ -1,0 +1,20 @@
+:root {
+  --primary-color: #b51f3a; /* Dark Red / Food Red */
+  --primary-hover-color: #92142a;
+  --primary-light-color: #fcecef;
+  --secondary-color: #ffffff;
+  --text-color: #222222;
+  --muted-color: #777777;
+  --background-color: #f8f8f8;
+  --border-color: #e9ecef;
+  --success-color: #198754;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 16px rgba(181, 31, 58, 0.1);
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-pill: 50px;
+}

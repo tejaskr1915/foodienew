@@ -1,0 +1,154 @@
+/* Sidebar Layout */
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.sidebar-container {
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+  flex: 0 0 250px;
+  background-color: #1c1c1e;
+  color: #fff;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.sidebar-container.collapsed {
+  width: 70px;
+  min-width: 70px;
+  max-width: 70px;
+  flex: 0 0 70px;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #2c2c2e;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  flex-grow: 1;
+}
+
+.sidebar-section-title {
+  padding: 10px 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #8e8e93;
+  margin-top: 15px;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: #aeaeb2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  gap: 12px;
+  font-size: 14px;
+}
+.sidebar-link:hover {
+  color: #fff;
+  background-color: rgba(255,255,255,0.05);
+}
+.sidebar-link.active {
+  color: #fff;
+  background-color: var(--primary-color);
+  font-weight: 600;
+}
+
+.sidebar-container.collapsed .sidebar-link {
+  justify-content: center;
+  padding: 12px 0;
+}
+
+/* StatCard layout */
+.stat-card {
+  padding: 20px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-color);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+/* Admin top header */
+.admin-header {
+  height: 70px;
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+/* Kitchen layout card list */
+.kitchen-ticket {
+  border-left: 5px solid var(--primary-color);
+}
+.kitchen-ticket.ticket-preparing {
+  border-left-color: var(--warning-color);
+}
+.kitchen-ticket.ticket-ready {
+  border-left-color: var(--info-color, #0dcaf0);
+}
+.kitchen-ticket.ticket-completed {
+  border-left-color: #198754;
+  background-color: #fcfdfd;
+}
+
+/* Table grid statuses */
+.table-grid-cell {
+  position: relative;
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  text-align: left;
+  border: 1.5px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+.table-grid-cell.table-available {
+  border-style: solid;
+  border-color: rgba(34, 165, 89, 0.4);
+  background-color: rgba(34, 165, 89, 0.03);
+}
+.table-grid-cell.table-occupied {
+  border-style: solid;
+  border-color: rgba(239, 68, 68, 0.4);
+  background-color: rgba(239, 68, 68, 0.03);
+}
+.table-grid-cell.table-reserved {
+  border-style: solid;
+  border-color: rgba(242, 178, 51, 0.5);
+  background-color: rgba(242, 178, 51, 0.03);
+}
